@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pengaturan_umum.apps.PengaturanUmumConfig',
     'pustaka.apps.PustakaConfig',
+    'penduduk.apps.PendudukConfig',
 ]
 
 MIDDLEWARE = [

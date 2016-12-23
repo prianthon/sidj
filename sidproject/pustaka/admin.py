@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Agama, GolonganDarah, HubunganKeluarga, JenisKelamin, Pekerjaan, Pendidikan, PenyandangCacat, StatusKawin, StatusKependudukan, StatusKk, StatusTinggal
+from .models import Agama, GolonganDarah, HubunganKeluarga, JenisKelamin, Pekerjaan, Pendidikan, PenyandangCacat, StatusKawin, StatusKependudukan, StatusKk, StatusTinggal, LibSurat
 
 class AgamaAdmin(admin.ModelAdmin):
     list_display = ('id', 'agama')
@@ -35,6 +35,9 @@ class StatusKkAdmin(admin.ModelAdmin):
 class StatusTinggalAdmin(admin.ModelAdmin):
     list_display = ('id', 'status_tinggal')
 
+class LibSuratAdmin(admin.ModelAdmin):
+    list_display = ('kode_surat', 'nama_surat', 'parent_id')
+
 admin.site.register(Agama, AgamaAdmin)
 admin.site.register(GolonganDarah, GolonganDarahAdmin)
 admin.site.register(HubunganKeluarga, HubunganKeluargaAdmin)
@@ -46,3 +49,4 @@ admin.site.register(StatusKawin, StatusKawinAdmin)
 admin.site.register(StatusKependudukan, StatusKependudukanAdmin)
 admin.site.register(StatusKk, StatusKkAdmin)
 admin.site.register(StatusTinggal, StatusTinggalAdmin)
+admin.site.register(LibSurat, LibSuratAdmin)

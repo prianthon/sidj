@@ -88,3 +88,12 @@ class StatusTinggal(models.Model):
 
     def __str__(self):
         return self.status_tinggal
+
+@python_2_unicode_compatible # mendukung Python 2
+class LibSurat(models.Model):
+    kode_surat = models.CharField(max_length=45, primary_key=True)
+    nama_surat = models.CharField(max_length=200)
+    parent_id = models.CharField(max_length=45)
+
+    def __str__(self):
+        return self.nama_surat

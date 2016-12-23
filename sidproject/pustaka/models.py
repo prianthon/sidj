@@ -81,3 +81,10 @@ class StatusKk(models.Model):
 
     def __str__(self):
         return self.status_kk
+
+@python_2_unicode_compatible # mendukung Python 2
+class StatusTinggal(models.Model):
+    status_tinggal = models.CharField(max_length=45)
+
+    def __str__(self):
+        return self.status_tinggal

@@ -7,3 +7,10 @@ class Agama(models.Model):
 
     def __str__(self):
         return self.agama
+
+@python_2_unicode_compatible # mendukung Python 2
+class GolonganDarah(models.Model):
+    golongan_darah = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.golongan_darah

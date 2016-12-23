@@ -40,3 +40,10 @@ class Pekerjaan(models.Model):
 
     def __str__(self):
         return self.pekerjaan
+
+@python_2_unicode_compatible # mendukung Python 2
+class Pendidikan(models.Model):
+    pendidikan = models.CharField(max_length=75)
+
+    def __str__(self):
+        return self.pendidikan

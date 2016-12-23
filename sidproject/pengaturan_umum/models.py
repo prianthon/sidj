@@ -23,5 +23,16 @@ class IdentitasDesa(models.Model):
     def __str__(self):
         return self.nama_desa
 
-#@python_2_unicode_compatible # mendukung Python 2
-#class PerangkatDesa(models.Model):
+@python_2_unicode_compatible # mendukung Python 2
+class PerangkatDesa(models.Model):
+    nama = models.ForeignKey('penduduk.Penduduk')
+    nama_jabatan = models.ForeignKey('pustaka.JabatanPerangkat')
+    niap = models.CharField(max_length=45)
+    nip = models.CharField(max_length=45)
+    pangkat_golongan = models.CharField(max_length=45)
+    no_tanggal_keputusan_pengangkatan = models.CharField(max_length=45)
+    no_tanggal_keputusan_pemberhentian = models.CharField(max_length=45)
+    keterangan = models.TextField()
+
+    def __str__(self):
+        return self.nama

@@ -11,7 +11,7 @@ class Penduduk(models.Model):
     nik = models.CharField(max_length=20)
     nama = models.CharField(max_length=100)
     tempat_lahir = models.CharField(max_length=55)
-    tanggal_lahir = models.DateField
+    tanggal_lahir = models.DateField(null=True)
     kewarganegaraan = models.CharField(max_length=50, choices=KEWARGANEGARAANS)
     foto = models.CharField(max_length=200)
     jenis_kelamin = models.ForeignKey('pustaka.JenisKelamin')

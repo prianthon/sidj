@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pengaturan_umum.apps.PengaturanUmumConfig',
+    'pustaka.apps.PustakaConfig',
 ]
 
 MIDDLEWARE = [

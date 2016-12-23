@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Agama, GolonganDarah, HubunganKeluarga, JenisKelamin, Pekerjaan, Pendidikan, PenyandangCacat
+from .models import Agama, GolonganDarah, HubunganKeluarga, JenisKelamin, Pekerjaan, Pendidikan, PenyandangCacat, StatusKawin
 
 class AgamaAdmin(admin.ModelAdmin):
     list_display = ('id', 'agama')
@@ -23,6 +23,9 @@ class PendidikanAdmin(admin.ModelAdmin):
 class PenyandangCacatAdmin(admin.ModelAdmin):
     list_display = ('id', 'nama_cacat', 'tipe_cacat')
 
+class StatusKawinAdmin(admin.ModelAdmin):
+    list_display = ('id', 'status_kawin')
+
 admin.site.register(Agama, AgamaAdmin)
 admin.site.register(GolonganDarah, GolonganDarahAdmin)
 admin.site.register(HubunganKeluarga, HubunganKeluargaAdmin)
@@ -30,3 +33,4 @@ admin.site.register(JenisKelamin, JenisKelaminAdmin)
 admin.site.register(Pekerjaan, PekerjaanAdmin)
 admin.site.register(Pendidikan, PendidikanAdmin)
 admin.site.register(PenyandangCacat, PenyandangCacatAdmin)
+admin.site.register(StatusKawin, StatusKawinAdmin)

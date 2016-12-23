@@ -60,3 +60,10 @@ class PenyandangCacat(models.Model):
 
     def __str__(self):
         return self.nama_cacat
+
+@python_2_unicode_compatible # mendukung Python 2
+class StatusKawin(models.Model):
+    status_kawin = models.CharField(max_length=45)
+
+    def __str__(self):
+        return self.status_kawin

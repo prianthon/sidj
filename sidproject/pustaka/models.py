@@ -67,3 +67,10 @@ class StatusKawin(models.Model):
 
     def __str__(self):
         return self.status_kawin
+
+@python_2_unicode_compatible # mendukung Python 2
+class StatusKependudukan(models.Model):
+    status_kependudukan = models.CharField(max_length=45)
+
+    def __str__(self):
+        return self.status_kependudukan

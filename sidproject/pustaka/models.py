@@ -28,3 +28,15 @@ class JenisKelamin(models.Model):
 
     def __str__(self):
         return self.jenis_kelamin
+
+@python_2_unicode_compatible # mendukung Python 2
+class Pekerjaan(models.Model):
+    TIPES = (
+        ('A', 'A untuk PNS dan Mandiri'),
+        ('B', 'B untuk Sebaliknya'),
+    )
+    pekerjaan = models.CharField(max_length=75)
+    tipe = models.CharField(max_length=1, choices=TIPES)
+
+    def __str__(self):
+        return self.pekerjaan

@@ -47,3 +47,16 @@ class Pendidikan(models.Model):
 
     def __str__(self):
         return self.pendidikan
+
+@python_2_unicode_compatible # mendukung Python 2
+class PenyandangCacat(models.Model):
+    TIPE_CACATS = (
+        ('FISIK', 'FISIK'),
+        ('MENTAL', 'MENTAL'),
+        ('NULL', 'NULL'),
+    )
+    nama_cacat = models.CharField(max_length=45)
+    tipe_cacat = models.CharField(max_length=15, choices=TIPE_CACATS)
+
+    def __str__(self):
+        return self.nama_cacat

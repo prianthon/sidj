@@ -14,3 +14,10 @@ class GolonganDarah(models.Model):
 
     def __str__(self):
         return self.golongan_darah
+
+@python_2_unicode_compatible # mendukung Python 2
+class HubunganKeluarga(models.Model):
+    hubungan_keluarga = models.CharField(max_length=45)
+
+    def __str__(self):
+        return self.hubungan_keluarga

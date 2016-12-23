@@ -21,3 +21,10 @@ class HubunganKeluarga(models.Model):
 
     def __str__(self):
         return self.hubungan_keluarga
+
+@python_2_unicode_compatible # mendukung Python 2
+class JenisKelamin(models.Model):
+    jenis_kelamin = models.CharField(max_length=45)
+
+    def __str__(self):
+        return self.jenis_kelamin

@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
 @python_2_unicode_compatible # mendukung Python 2
-class PengaturanUmum(models.Model):
+class IdentitasDesa(models.Model):
     nama_desa = models.CharField(max_length=100)
     kode_desa = models.CharField(max_length=100)
     nama_kepala_desa = models.CharField(max_length=100)

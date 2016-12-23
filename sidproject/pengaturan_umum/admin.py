@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import PengaturanUmum
+from .models import IdentitasDesa
 
-admin.site.register(PengaturanUmum)
+admin.site.register(IdentitasDesa)

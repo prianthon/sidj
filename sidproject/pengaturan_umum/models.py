@@ -22,3 +22,6 @@ class IdentitasDesa(models.Model):
 
     def __str__(self):
         return self.nama_desa
+
+#@python_2_unicode_compatible # mendukung Python 2
+#class PerangkatDesa(models.Model):

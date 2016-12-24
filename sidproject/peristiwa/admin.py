@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Kelahiran
+
+#class KelahiranAdmin(admin.ModelAdmin):
+#    fieldsets = [
+#        ('Bayi yang Lahir', {'fields': ['tanggal_dan_waktu_lahir', '']})
+#    ]
+
+admin.site.register(Kelahiran)

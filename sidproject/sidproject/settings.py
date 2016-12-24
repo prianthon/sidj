@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'pengaturan_umum.apps.PengaturanUmumConfig',
     'pustaka.apps.PustakaConfig',
     'penduduk.apps.PendudukConfig',
+    'peristiwa.apps.PeristiwaConfig',
 ]
 
 MIDDLEWARE = [
